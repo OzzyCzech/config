@@ -1,0 +1,30 @@
+{
+  "name": "sphido/config",
+  "keywords": [
+    "config"
+  ],
+  "license": "BSD-3-Clause",
+  "homepage": "http://www.sphido.org",
+  "description": "Fastest config ever",
+  "authors": [
+    {
+      "name": "Roman Ožana",
+      "homepage": "http://www.omdesign.cz/",
+      "email": "ozana@omdesign.cz"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/sphido/config/issues"
+  },
+  "autoload": {
+    "files": [
+      "src/config.php"
+    ]
+  },
+  "require": {
+    "php": ">=5.5.6"
+  },
+  "require-dev": {
+    "nette/tester": "*"
+  }
+}
