@@ -1,7 +1,5 @@
 # Sphido / Config
 
-## Default value
-
 Sphido config loading configurations as pure PHP arrays/objects it's doing only `array_replace_recursive`!
 
 - no obscure config file parsers
@@ -9,27 +7,43 @@ Sphido config loading configurations as pure PHP arrays/objects it's doing only 
 - no unnecessary code
 - no power loss
 
-It's simple, just call `config()` in your `index.php` to setup basic values
+## Setup values
+
+It's simple, just call `config()` in your `index.php` to setup values
 
 ```php
-config([], include __DIR__ . '/config.base.php', include __DIR__ . '/config.stable.php')
+config(
+	[],
+	include __DIR__ . '/config.base.php',
+	include __DIR__ . '/config.stable.php'
+);
 ```
 
-Your `config.php` need contain:
+Your `config.base.php` need return some array values e.g.:
 
 ```php
-return ['example' => 'value', 'invokeme' => function() {}];
+return [
+	'example' => 'value',
+	'invokeme' => function() {}
+	'constant' => PHP_VERSION,
+	'execute' => $a + $b
+	'object' => (object)['a' => 'b', 'c' => 'd']
+	'array' => ['a' => 'b', 'c' => 'd']
+];
 ```
 
-## Read and write value
+## Read and Write
+
+Then simply read and write any values:
 
 ```php
 config()->example = 'save'
 echo config()->example; // will print save
 ```
 
-It's pure PHP you can invoke whatever you need:
+It's pure PHP you can store whatever you need:
 
 ```php
-config()->invokeme
+config()->invokeme = function() { return 'something'};
+call_user_func(config()->invokeme);
 ```
