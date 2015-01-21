@@ -2,14 +2,15 @@
 /**
  * @author Roman Ozana <ozana@omdesign.cz>
  */
-use Tester\Assert;
 
-require __DIR__ . '/../vendor/autoload.php';
+namespace my { // overwrite by own function and add default value
 
-{ // overwrite by own function and add default value
+	require __DIR__ . '/../vendor/autoload.php';
+
+	use Tester\Assert;
 
 	function config() {
-		return config(['value' => false], ['value' => true]);
+		return \config(['value' => false], ['value' => true]);
 	}
 
 	Assert::true(config()->value);
