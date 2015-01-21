@@ -1,6 +1,6 @@
 # Sphido / Config
 
-[![Latest Stable Version](https://poser.pugx.org/sphido/config/v/stable.svg)](https://packagist.org/packages/sphido/config) [![Total Downloads](https://poser.pugx.org/sphido/config/downloads.svg)](https://packagist.org/packages/sphido/config) [![Latest Unstable Version](https://poser.pugx.org/sphido/config/v/unstable.svg)](https://packagist.org/packages/sphido/config) [![License](https://poser.pugx.org/sphido/config/license.svg)](https://packagist.org/packages/sphido/config)
+[![Build Status](https://travis-ci.org/sphido/config.svg?branch=master)] (https://travis-ci.org/sphido/config)[![Latest Stable Version](https://poser.pugx.org/sphido/config/v/stable.svg)](https://packagist.org/packages/sphido/config) [![Total Downloads](https://poser.pugx.org/sphido/config/downloads.svg)](https://packagist.org/packages/sphido/config) [![Latest Unstable Version](https://poser.pugx.org/sphido/config/v/unstable.svg)](https://packagist.org/packages/sphido/config) [![License](https://poser.pugx.org/sphido/config/license.svg)](https://packagist.org/packages/sphido/config)
 
 Sphido config loading configurations as pure PHP arrays/objects it's doing only `array_replace_recursive`!
 
