@@ -49,3 +49,15 @@ It's pure PHP you can store whatever you need:
 config()->invokeme = function() { return 'something'};
 call_user_func(config()->invokeme);
 ```
+
+## Reinit config values
+
+Sometimes you can need change whole config content in runtime
+
+```php
+config(); // you can init empty config
+
+config(['oldConfigValues' => 'This is old content']);
+config(['reinitValues' => 'Reinit again...']);
+config()->reinitValues;
+```
