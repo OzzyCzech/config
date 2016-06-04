@@ -10,7 +10,7 @@ namespace my { // overwrite by own function and add default value
 	use Tester\Assert;
 
 	function config() {
-		return \config(['value' => false], ['value' => true]);
+		return \app\config(['value' => false], ['value' => true]);
 	}
 
 	Assert::true(config()->value);
@@ -18,5 +18,4 @@ namespace my { // overwrite by own function and add default value
 	// try overwrite again
 	config(['value' => false]);
 	Assert::true(config()->value);
-
 }

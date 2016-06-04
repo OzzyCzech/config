@@ -6,6 +6,8 @@ use Tester\Assert;
 
 require __DIR__ . '/../vendor/autoload.php';
 
+use function app\config as config;
+
 { // init config by default value and config file
 	config(
 		[

@@ -6,6 +6,8 @@ use Tester\Assert;
 
 require __DIR__ . '/../vendor/autoload.php';
 
+use function app\config as config;
+
 config(); // init empty config
 Assert::equal(config(), new stdClass());
 config()->abc = 'def';

@@ -14,7 +14,7 @@ Sphido config loading configurations as pure PHP arrays/objects it's doing only 
 It's simple, just call `config()` in your `index.php` to setup values
 
 ```php
-config(
+/app/config(
 	[],
 	include __DIR__ . '/config.base.php',
 	include __DIR__ . '/config.stable.php'
@@ -39,14 +39,14 @@ return [
 Then simply read and write any values:
 
 ```php
-config()->example = 'save'
+/app/config()->example = 'save'
 echo config()->example; // will print save
 ```
 
 It's pure PHP you can store whatever you need:
 
 ```php
-config()->invokeme = function() { return 'something'};
+/app/config()->invokeme = function() { return 'something'};
 call_user_func(config()->invokeme);
 ```
 
@@ -55,9 +55,8 @@ call_user_func(config()->invokeme);
 Sometimes you can need change whole config content in runtime
 
 ```php
-config(); // you can init empty config
-
-config(['oldConfigValues' => 'This is old content']);
-config(['reinitValues' => 'Reinit again...']);
-config()->reinitValues;
+/app/config(); // you can init empty config
+/app/config(['oldConfigValues' => 'This is old content']);
+/app/config(['reinitValues' => 'Reinit again...']);
+/app/config()->reinitValues;
 ```
