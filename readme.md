@@ -40,7 +40,7 @@ Then simply read and write any values:
 
 ```php
 /app/config()->example = 'save'
-echo config()->example; // will print save
+echo /app/config()->example; // will print save
 ```
 
 It's pure PHP you can store whatever you need:
