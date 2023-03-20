@@ -1,6 +1,6 @@
 <?php
 /**
- * @author Roman Ozana <ozana@omdesign.cz>
+ * @author Roman Ozana <roman@ozana.cz>
  */
 
 namespace my { // overwrite by own function and add default value
